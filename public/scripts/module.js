@@ -7,7 +7,7 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '../views/intro.html'
     })
     .when('/form', {
-        controller: 'viewsController',
+        controller: 'dbCtrl',
         templateUrl: '../views/form.html'
     })
     .when('/login', {
@@ -20,5 +20,5 @@ app.config(function($routeProvider, $locationProvider) {
     })
     .otherwise({redirectTo: '/'});
     $locationProvider.hashPrefix('');
-    
+
 });
