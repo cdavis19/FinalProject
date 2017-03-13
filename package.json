@@ -1,0 +1,26 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "web app to incentivize reading by offering in-app rewards",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pg": "^6.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdavis19/FinalProject.git"
+  },
+  "author": "Adam Mason, Chris Davis, Jared Eisenhauer, Christina Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdavis19/FinalProject/issues"
+  },
+  "homepage": "https://github.com/cdavis19/FinalProject#readme"
+}
