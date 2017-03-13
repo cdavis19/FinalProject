@@ -4,7 +4,6 @@ var app = express();
 var connectionString = 'postgres://postgres:bradsucks@localhost:5432/Readventure';
 var bodyParser = require('body-parser');
 var client = new pg.Client(connectionString);
-
 var config = {
   user: 'postgres',
   database: 'Readventure',

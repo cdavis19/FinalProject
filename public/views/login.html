@@ -1,4 +1,9 @@
-<input type="text" ng-model="userName" />
+<label for="userName">Enter User Name</label>
+<input type="text" name="userName" ng-model="student.name" />
+<input type="button" name="getUser" ng-click="getUser()" value="Click me" />
+<p>
+  Hello {{student.name}}!
+</p>
 <div>
   <p ng-repeat="student in students">{{student.name}} read {{student.booksread}} books!</p>
 </div>
