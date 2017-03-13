@@ -23,13 +23,15 @@ app.use(express.static(__dirname + '/public'));
 app.get('/get-student', function(req, res){
   var results = [];
   pg.connect(connectionString, function(err, client, done){
-    var query = client.query('SELECT * FROM studentsinfo');
+
+    var query = client.query('select * from studentsinfo');
 
     query.on('row', function(row){
       results.push(row);
     });
     query.on('end', function(){
       client.end();
+      console.log(res.json(results));
       return res.json(results);
     });
   });
