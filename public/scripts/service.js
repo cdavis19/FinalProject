@@ -16,6 +16,7 @@ app.factory('myFactory', function($http){
       method: 'GET',
       url: '/get-student'
     }).then(function success(response){
+      console.log(response);
       student = response.data;
     });
     return promise;

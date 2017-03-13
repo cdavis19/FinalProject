@@ -5,4 +5,4 @@ app.controller('dbCtrl', function($scope, myFactory){
     $scope.student = myFactory.update();
     console.log($scope.student);
   });
-})
+});
