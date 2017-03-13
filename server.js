@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/get-student', function(req, res){
   var results = [];
   pg.connect(connectionString, function(err, client, done){
-    var query = client.query('select * from students');
+    var query = client.query('SELECT * FROM studentsinfo');
 
     query.on('row', function(row){
       results.push(row);
