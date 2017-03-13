@@ -4,7 +4,8 @@ app.factory('myFactory', function($http){
   var student = [];
   return {
     update: update,
-    getStudent: getStudent
+    getStudent: getStudent,
+    addStudent: addStudent
   };
 
   function update(){
@@ -21,5 +22,19 @@ app.factory('myFactory', function($http){
     });
     return promise;
   };
+
+  function addStudent(newStudent) {
+
+  var promise = $http({
+    method: 'POST',
+    url: '/add-student',
+    data: newStudent
+  }).then(function success(response){
+    console.log(response);
+    student = response.data;
+  });
+  return promise;
+};
+
 
 });

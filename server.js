@@ -1,14 +1,14 @@
 var express = require('express');
 var pg = require('pg');
 var app = express();
-var connectionString = 'postgres://postgres:bradsucks@localhost:5432/Readventure';
+var connectionString = 'postgres://postgres:FrontEnd@localhost:5432/Readventure';
 var bodyParser = require('body-parser');
 var client = new pg.Client(connectionString);
 
 var config = {
   user: 'postgres',
   database: 'Readventure',
-  password: 'bradsucks',
+  password: 'FrontEnd',
   host: 'localhost',
   port: 5432,
   max: 100,
@@ -35,6 +35,29 @@ app.get('/get-student', function(req, res){
     });
   });
 });
+
+app.post('/add-student', function(req, res, next){
+var results = [];
+var data = {
+  student: req.body.studentname,
+  numOfBooks: req.body.numberofbooks,
+  pages: req.body.pagesread
+}
+pg.connect(connectionString, function(err, client, done) {
+client.query('INSERT INTO studentsinfo(student, numOfBooks, pages) values($1, $2, $3)',
+[data.student, data.numOfBooks, data.pages]);
+var query = client.query('SELECT * FROM studentsinfo');
+
+query.on('row', function(row){
+      results.push(row);
+    });
+    query.on('end', function(){
+      client.end();
+      return res.json(results);
+    });
+  });
+});
+
 
 var server = app.listen(3000, function(){
   var port = server.address().port;
