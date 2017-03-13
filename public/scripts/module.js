@@ -6,6 +6,19 @@ app.config(function($routeProvider, $locationProvider) {
         controller: 'viewsController',
         templateUrl: '../views/intro.html'
     })
+    .when('/form', {
+        controller: 'viewsController',
+        templateUrl: '../views/form.html'
+    })
+    .when('/login', {
+        controller: 'viewsController',
+        templateUrl: '../views/login.html'
+    })
+      .when('/trophyroom', {
+        controller: 'viewsController',
+        templateUrl: '../views/trophyroom.html'
+    })
     .otherwise({redirectTo: '/'});
     $locationProvider.hashPrefix('');
+    
 });
