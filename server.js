@@ -1,13 +1,13 @@
 var express = require('express');
 var pg = require('pg');
 var app = express();
-var connectionString = 'postgres://postgres:bradsucks@localhost:5432/postgres';
+var connectionString = 'Readventures://postgres:bradsucks@localhost:5432/postgres';
 var bodyParser = require('body-parser');
 var client = new pg.Client(connectionString);
 
 var config = {
   user: 'postgres',
-  database: 'postgres',
+  database: 'Readventures',
   password: 'bradsucks',
   host: 'localhost',
   port: 5432,
@@ -23,13 +23,14 @@ app.use(express.static(__dirname + '/public'));
 app.get('/get-student', function(req, res){
   var results = [];
   pg.connect(connectionString, function(err, client, done){
-    var query = client.query('select * from students');
+    var query = client.query('select * from studentsinfo');
 
     query.on('row', function(row){
       results.push(row);
     });
     query.on('end', function(){
       client.end();
+      console.log(res.json(results));
       return res.json(results);
     });
   });
