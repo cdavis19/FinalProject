@@ -1,1 +1,10 @@
 a {font-family: 'Cabin Sketch', cursive;}
+
+.box{
+  border: 5px solid black;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 45px;
+  margin-left: 20px;
+}
