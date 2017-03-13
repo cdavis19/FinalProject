@@ -1,14 +1,14 @@
 var express = require('express');
 var pg = require('pg');
 var app = express();
-var connectionString = 'postgres://postgres:2656323d@localhost:5432/Readventure';
+var connectionString = 'postgres://postgres:bradsucks@localhost:5432/Readventure';
 var bodyParser = require('body-parser');
 var client = new pg.Client(connectionString);
 
 var config = {
   user: 'postgres',
   database: 'Readventure',
-  password: '2656323d',
+  password: 'bradsucks',
   host: 'localhost',
   port: 5432,
   max: 100,
@@ -31,7 +31,6 @@ app.get('/get-student', function(req, res){
     });
     query.on('end', function(){
       client.end();
-      console.log(res.json(results));
       return res.json(results);
     });
   });
