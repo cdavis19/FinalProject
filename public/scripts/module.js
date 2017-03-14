@@ -8,6 +8,15 @@ app.directive("headerDirective", function() {
     }
 });
 
+app.directive("footerDirective", function() {
+    return {
+        restrict: "EAMC",
+        replace: false,
+        templateUrl: "views/footer.html"
+    }
+});
+
+
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/intro', {
