@@ -15,7 +15,11 @@
     <script src='scripts/module.js'></script>
     <script src='scripts/controller.js'></script>
     <script src='scripts/dbCtrl.js'></script>
+    <script src='scripts/madInputCtrl.js'></script>
+    <script src='scripts/madOutputCtrl.js'></script>
     <script src='scripts/service.js'></script>
+    <script src='scripts/madFactory.js'></script>
+
 </head>
 
 <body ng-controller="viewsController">
@@ -23,11 +27,17 @@
     <nav>
         <a href="#/intro">Intro</a> <br>
         <a href="#/form">Form</a>
+        <a href="#/formOutput">Tracker</a>
         <a href="#/login">Login</a>
         <a href="#/trophyroom">Trophies</a>
     </nav>
     <div ng-controller="dbCtrl">
       <div>
+
+        <div ng-controller="libInput">
+          </div>
+          <div ng-controller="libOutput">
+            </div>
         <ng-view></ng-view>
       </div>
     </div>
