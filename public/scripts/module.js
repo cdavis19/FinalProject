@@ -18,7 +18,7 @@ app.config(function($routeProvider, $locationProvider) {
         controller: 'viewsController',
         templateUrl: '../views/trophyroom.html'
     })
-    .otherwise({redirectTo: '/'});
+    .otherwise({redirectTo: '/intro'});
     $locationProvider.hashPrefix('');
 
 });

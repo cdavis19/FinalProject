@@ -8,3 +8,30 @@
 	<a href="#/login">Login</a>
 	<a href="#/trophyroom">Trophies</a>
 </nav>
+
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Please Login:</h4>
+						</div>
+						<div class="modal-body">
+							<label for="userName">Name:</label>
+							<input type="text" name="userName" ng-model="student.studentname" />
+							<input type="button" name="getUser" id="getUser" ng-click="getUser()" value="Click me" />
+							<div ng-show="display">
+									<p>
+											{{selectedStudent.studentname}} read {{selectedStudent.booksread}} books!
+									</p>
+							</div>
+						</div>
+						<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+				</div>
+		</div>
+</div>
