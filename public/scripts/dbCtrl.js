@@ -9,15 +9,18 @@ app.controller('dbCtrl', function($scope, $animate, myFactory){
   $scope.student = {};
   $scope.getUser = function(){
     console.log($scope.student);
-    var enteredName = $scope.students.map(function(x){
-      return x.name;
-    }).indexOf($scope.student.name);
-    $scope.selectedStudent = $scope.students[enteredName];
+    var index = $scope.students.map(function(x) {
+      return x.studentname;
+    }).indexOf($scope.student.studentname);
+    $scope.selectedStudent = $scope.students[index];
+
+
+
     if (!$scope.display){
       $scope.display = !$scope.display;
     }else{
 
     };
-    console.log("Selected student is"+$scope.selectedStudent);
+    console.log($scope.selectedStudent);
   }
 });
