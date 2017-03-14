@@ -12,7 +12,9 @@
 
 <body ng-controller="viewsController">
     <div ng-controller="dbCtrl">
-      <header-directive></header-directive>
+      <header>
+        <header-directive></header-directive>
+      </header>
         <div>
             <ng-view></ng-view>
         </div>

@@ -16,7 +16,6 @@ app.directive("footerDirective", function() {
     }
 });
 
-
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/intro', {

@@ -1,6 +1,5 @@
 a {font-family: 'Cabin Sketch', cursive;}
 
-<<<<<<< HEAD
 .box{
   /*border: 5px solid black;*/
   height: 200px;
@@ -19,7 +18,7 @@ a {font-family: 'Cabin Sketch', cursive;}
   margin-top: 45px;
   background-color: blue;
   text-align: center;
-  
+
 }
 
 .flip-container {
@@ -63,7 +62,6 @@ a {font-family: 'Cabin Sketch', cursive;}
 .back {
 	transform: rotateY(180deg);
 
-=======
 .modal {
   text-align: center;
   padding: 0!important;
@@ -87,5 +85,5 @@ a {font-family: 'Cabin Sketch', cursive;}
   padding: 15px;
   font-size: 20px;
   text-align: center;
->>>>>>> server
+
 }
