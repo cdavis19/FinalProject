@@ -18,6 +18,6 @@ app.controller('dbCtrl', function($scope, $animate, myFactory){
     }else{
 
     };
-    console.log($scope.selectedStudent);
+    console.log("Selected student is"+$scope.selectedStudent);
   }
 });
