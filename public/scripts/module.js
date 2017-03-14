@@ -1,5 +1,13 @@
 var app = angular.module('myMod', ['ngRoute', 'ngAnimate']);
 
+app.directive("header", function() {
+    return {
+        restrict: "EAMC",
+        replace: false,
+        templateUrl: "views/header.html"
+    }
+});
+
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/intro', {
