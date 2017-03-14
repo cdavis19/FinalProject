@@ -1,4 +1,4 @@
-var app = angular.module('myMod', ['ngRoute']);
+var app = angular.module('myMod', ['ngRoute', 'ngAnimate']);
 
 app.directive("headerDirective", function() {
     return {
@@ -7,6 +7,15 @@ app.directive("headerDirective", function() {
         templateUrl: "views/header.html"
     }
 });
+
+app.directive("footerDirective", function() {
+    return {
+        restrict: "EAMC",
+        replace: false,
+        templateUrl: "views/footer.html"
+    }
+});
+
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -26,7 +35,7 @@ app.config(function($routeProvider, $locationProvider) {
         controller: 'viewsController',
         templateUrl: '../views/trophyroom.html'
     })
-    .otherwise({redirectTo: '/'});
+    .otherwise({redirectTo: '/intro'});
     $locationProvider.hashPrefix('');
 
 });
