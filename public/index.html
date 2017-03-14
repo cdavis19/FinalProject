@@ -20,12 +20,9 @@
 
 <body ng-controller="viewsController">
 
-    <nav>
-        <a href="#/intro">Intro</a> <br>
-        <a href="#/form">Form</a>
-        <a href="#/login">Login</a>
-        <a href="#/trophyroom">Trophies</a>
-    </nav>
+
+  <header-directive></header-directive>
+  
     <div ng-controller="dbCtrl">
       <div>
         <ng-view></ng-view>

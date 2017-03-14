@@ -1,14 +1,14 @@
 var express = require('express');
 var pg = require('pg');
 var app = express();
-var connectionString = 'postgres://postgres:bradsucks@localhost:5432/Readventure';
+var connectionString = 'postgres://postgres:trapordie@localhost:5432/Readventure';
 var bodyParser = require('body-parser');
 var client = new pg.Client(connectionString);
 
 var config = {
   user: 'postgres',
   database: 'Readventure',
-  password: 'bradsucks',
+  password: 'trapordie',
   host: 'localhost',
   port: 5432,
   max: 100,
