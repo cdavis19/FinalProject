@@ -1,4 +1,4 @@
-var app = angular.module('myMod', ['ngRoute']);
+var app = angular.module('myMod', ['ngRoute', 'ngAnimate']);
 
 app.directive("headerDirective", function() {
     return {
@@ -35,7 +35,7 @@ app.config(function($routeProvider, $locationProvider) {
         controller: 'viewsController',
         templateUrl: '../views/trophyroom.html'
     })
-    .otherwise({redirectTo: '/'});
+    .otherwise({redirectTo: '/intro'});
     $locationProvider.hashPrefix('');
 
 });
