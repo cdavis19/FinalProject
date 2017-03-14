@@ -1,24 +1,24 @@
 a {font-family: 'Cabin Sketch', cursive;}
 
 .box{
-  /*border: 5px solid black;*/
-  height: 200px;
+
+  height: 175px;
   width: 200px;
   border-radius: 50%;
-  margin-top: 45px;
+  margin-top:  45px;
   background-color: blue;
   text-align: center;
 }
 
 #img{
-  /*border: 5px solid black;*/
-  height: 200px;
+
+  height: 175px;
   width: 200px;
   border-radius: 50%;
   margin-top: 45px;
-  background-color: blue;
-  text-align: center;
-  
+  box-shadow: 5px 5px 15px #606060;
+
+
 }
 
 .flip-container {
@@ -31,7 +31,8 @@ a {font-family: 'Cabin Sketch', cursive;}
 
 .flip-container, .front, .back {
 	width: 200px;
-	height: 200px;
+	height: 175px;
+
 }
 
 /* flip speed goes here */
@@ -55,6 +56,7 @@ a {font-family: 'Cabin Sketch', cursive;}
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+
 
 }
 
