@@ -11,8 +11,13 @@ a {font-family: 'Cabin Sketch', cursive;}
 
 }
 
-.text {
+p.text {
   margin-top: 25px;
+  word-wrap: break-word;
+  margin-left: 25px;
+  margin-right: 25px;
+  
+
 }
 
 #img{
