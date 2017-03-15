@@ -6,7 +6,7 @@ app.factory('myFactory', function($http){
     update: update,
     getStudent: getStudent,
     addStudent: addStudent,
-    editStudent: editStudent
+    updateBooksRead: updateBooksRead
   };
 
   function update(){
@@ -37,11 +37,12 @@ app.factory('myFactory', function($http){
   return promise;
 };
 
-function editStudent(){
+function updateBooksRead(totalBooks){
 
   var promise = $http({
     method: 'PUT',
-    url: '/edit-student',
+    url: '/update-books-read/'  + totalBooks.id,
+    data: booksread
   }).then(function success(response){
     console.log(response);
     student = response.data;

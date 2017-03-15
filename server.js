@@ -61,29 +61,27 @@ app.post('/add-student', function(req, res, next) {
     });
 });
 
-// app.put('/edit-student', function(req, res, next) {
-//     var results = [];
-//     var id = req.params.id;
-//     var data = {
-//       student: req.body.studentname,
-//       numOfBooks: req.body.numberofbooks,
-//       pages: req.body.pagesread
-//     }
-//     pg.connect(connectionString, function(err, client, done) {
-//       client.query('UPDATE todo SET todo=($1) WHERE id=($2)', [data.todo, id]);
-//             var query = client.query('SELECT * FROM todo ORDER BY todo');
-//     [data.student, data.numOfBooks, data.pages]);
-//     var query = client.query('SELECT * FROM studentsinfo');
-//
-//     query.on('row', function(row){
-//           results.push(row);
-//         });
-//         query.on('end', function(){
-//           client.end();
-//           return res.json(results);
-//         });
-//       });
-//     });
+ app.put('/update-books-read', function(req, res, next) {
+     var results = [];
+     var id = req.params.id;
+     var data = {
+       booksread: req.body.booksread,
+     }
+     pg.connect(connectionString, function(err, client, done) {
+       client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [(data.booksread + 1), id]);
+     var query = client.query('SELECT * FROM studentsinfo');
+
+     query.on('row', function(row){
+           results.push(row);
+         console.log(row);
+         });
+         query.on('end', function(){
+           client.end();
+           return res.json(results);
+             console.log(results);
+         });
+       });
+     });
 
 
 
