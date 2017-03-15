@@ -1,5 +1,9 @@
-a {font-family: 'Cabin Sketch', cursive;}
-
+a {
+  font-family: 'Cabin Sketch', cursive;
+}
+h1, h4, li {
+  text-align: center;
+}
 .modal {
   text-align: center;
   padding: 0!important;
