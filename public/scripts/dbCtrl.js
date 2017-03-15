@@ -1,6 +1,4 @@
-
 var app = angular.module('myMod');
-
 
 
 app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory, studentFactory) {
@@ -18,8 +16,8 @@ app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory, s
         }).indexOf($scope.student.studentname);
         $scope.selectedStudent = $scope.students[index];
 
-
-
+studentFactory.sendStudent($scope.selectedStudent);
+        
         if (!$scope.display) {
             $scope.display = !$scope.display;
         } else {
