@@ -12,14 +12,15 @@
 
 <body ng-controller="viewsController">
     <div ng-controller="dbCtrl">
-      <header>
-        <header-directive></header-directive>
-      </header>
+        <header>
+            <header-directive></header-directive>
+        </header>
         <div>
             <ng-view></ng-view>
         </div>
-      <footer-directive></footer-directive>
+        <footer-directive></footer-directive>
     </div>
+
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js'></script>
@@ -30,7 +31,11 @@
     <script src='scripts/module.js'></script>
     <script src='scripts/controller.js'></script>
     <script src='scripts/dbCtrl.js'></script>
+    <script src='scripts/madInputCtrl.js'></script>
+    <script src='scripts/madOutputCtrl.js'></script>
     <script src='scripts/service.js'></script>
+    <script src='scripts/madFactory.js'></script>
+
 
 </body>
 
