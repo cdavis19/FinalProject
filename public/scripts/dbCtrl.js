@@ -1,12 +1,14 @@
 var app = angular.module('myMod');
 
 
-app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory, studentFactory) {
+app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory) {
+  console.log('dbctrl is running');
 
-    myFactory.getStudent().then(function() {
-        $scope.students = myFactory.update();
-        console.log("$scope.students=" + $scope.students);
-    });
+  // Gets all the rows from DB
+  dbFactory.getStudent().then(function() {
+      $scope.students = dbFactory.update();
+      console.log("$scope.students=" + $scope.students);
+  });
 
     $scope.student = {};
     $scope.getUser = function() {
@@ -16,17 +18,14 @@ app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory, s
         }).indexOf($scope.student.studentname);
         $scope.selectedStudent = $scope.students[index];
 
-studentFactory.sendStudent($scope.selectedStudent);
-        
+        studentFactory.sendStudent($scope.selectedStudent);
+
         if (!$scope.display) {
             $scope.display = !$scope.display;
         } else {
-
+          console.log('something went wrong');
         };
-        console.log($scope.selectedStudent);
 
     }
-
-
 
 });

@@ -1,6 +1,6 @@
 var app = angular.module('myMod');
 
-app.factory('myFactory', function($http){
+app.factory('dbFactory', function($http){
   var student = [];
   return {
     update: update,
@@ -37,12 +37,12 @@ app.factory('myFactory', function($http){
   return promise;
 };
 
-function updateBooksRead(totalBooks){
-
+function updateBooksRead(updatedStudent){
+  console.log(updatedStudent);
   var promise = $http({
     method: 'PUT',
-    url: '/update-books-read/'  + totalBooks.id,
-    data: booksread
+    url: '/update-books-read/'  + updatedStudent.id,
+    data: updatedStudent
   }).then(function success(response){
     console.log(response);
     student = response.data;

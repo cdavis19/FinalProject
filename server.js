@@ -61,14 +61,16 @@ app.post('/add-student', function(req, res, next) {
     });
 });
 
- app.put('/update-books-read', function(req, res, next) {
+ app.put('/update-books-read/:id', function(req, res, next) {
      var results = [];
      var id = req.params.id;
      var data = {
-       booksread: req.body.booksread,
-     }
+       booksread: req.body.booksread
+     };
+
+     console.log(data);
      pg.connect(connectionString, function(err, client, done) {
-       client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [(data.booksread + 1), id]);
+       client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [data.booksread, id]);
      var query = client.query('SELECT * FROM studentsinfo');
 
      query.on('row', function(row){
