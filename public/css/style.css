@@ -40,8 +40,8 @@ p.text {
 
 
 .locked {
-  /*filter: brightness(35%) grayscale(100%);*/
-  /*background-color: grey;*/
+  filter: brightness(35%) grayscale(100%);
+  background-color: grey;
 
 }
 

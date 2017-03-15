@@ -1,7 +1,9 @@
+
 var app = angular.module('myMod');
 
 
-app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory) {
+
+app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory, studentFactory) {
 
     myFactory.getStudent().then(function() {
         $scope.students = myFactory.update();
@@ -24,5 +26,9 @@ app.controller('dbCtrl', function($scope, $animate, myFactory, readingFactory) {
 
         };
         console.log($scope.selectedStudent);
+
     }
+
+
+
 });
