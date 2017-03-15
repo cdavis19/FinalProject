@@ -16,17 +16,18 @@ p.text {
   word-wrap: break-word;
   margin-left: 25px;
   margin-right: 25px;
-  
+  color: white;
+
 
 }
 
-#img{
+.trophy{
 
   height: 175px;
   width: 200px;
   border-radius: 50%;
   margin-top: 45px;
-  background-color: blue;
+  /*background-color: blue;*/
   /*text-align: center;*/
   box-shadow: 5px 5px 15px #606060;
 
@@ -35,6 +36,18 @@ p.text {
 
 .row{
   margin-top: 20px;
+}
+
+
+.locked {
+  /*filter: brightness(35%) grayscale(100%);*/
+  /*background-color: grey;*/
+
+}
+
+
+.unlocked {
+
 }
 
 .flip-container {
@@ -71,8 +84,6 @@ p.text {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-
-
 }
 
 /* back, initially hidden pane */
@@ -81,6 +92,12 @@ p.text {
 
 }
 .modal{
+
+}
+h1, h4, li {
+  text-align: center;
+}
+.modal {
   text-align: center;
   padding: 0!important;
 }
