@@ -1,6 +1,7 @@
 var app = angular.module('myMod');
 
 
+
 app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory) {
   console.log('dbctrl is running');
 
