@@ -53,7 +53,7 @@
 	</div>
 </div>
 <!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" ng-controller="registerCtrl">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -62,8 +62,8 @@
 			</div>
 			<div class="modal-body">
 				<label for="userName">Name:</label>
-				<input type="text" name="userName" ng-model="student.studentname" />
-				<input type="button" name="addUser" id="addUser" ng-click="" value="Click me" data-dismiss="modal"/>
+				<input type="text" name="userName" ng-model="newStudent.studentname" />
+				<input type="button" name="addUser" id="addUser" ng-click="dbFactory.addStudent(newStudent)" value="Click me" data-dismiss="modal"/>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
