@@ -1,7 +1,7 @@
 //requires express & pg in order to run
 var express = require('express');
 var pg = require('pg');
-//calling express 
+//calling express
 var app = express();
 //stores our password
 var password = require('./password');
@@ -37,9 +37,9 @@ app.use(express.static(__dirname + '/public'));
 app.get('/get-student', function(req, res) {
     var results = [];
     pg.connect(connectionString, function(err, client, done) {
-//selects everything from the students info table
+        //selects everything from the students info table
         var query = client.query('select * from studentsinfo');
-//going thru each row of our database and pushes each row to results array
+        //going thru each row of our database and pushes each row to results array
         query.on('row', function(row) {
             results.push(row);
         });
@@ -57,13 +57,13 @@ app.post('/add-student', function(req, res, next) {
     var data = {
         studentname: req.body.studentname
     };
-//connection is our address to the database, this allows the ability to access the information contained in the database
+    //connection is our address to the database, this allows the ability to access the information contained in the database
     pg.connect(connectionString, function(err, client, done) {
         //this query inserts a new row into the table based on data.studentname from the user input, and automatically sets booksread to zero
         client.query('INSERT INTO studentsinfo(studentname, booksread) values($1, $2)', [data.studentname, 0]);
-//this query pulls all of the data from the table
+        //this query pulls all of the data from the table
         var query = client.query('SELECT * FROM studentsinfo');
-//going thru each row of our database and pushes each row to results array
+        //going thru each row of our database and pushes each row to results array
         query.on('row', function(row) {
             results.push(row);
         });
@@ -76,33 +76,33 @@ app.post('/add-student', function(req, res, next) {
 });
 
 //this function updates existing data in the table/database i.e. updates number of books
- app.put('/update-books-read/:id', function(req, res, next) {
-     var results = [];
-     var id = req.params.id;
-     var data = {
-       booksread: req.body.booksread
-     };
+app.put('/update-books-read/:id', function(req, res, next) {
+    var results = [];
+    var id = req.params.id;
+    var data = {
+        booksread: req.body.booksread
+    };
 
-//updates the booksread field in table
-     pg.connect(connectionString, function(err, client, done) {
-       client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [data.booksread, id]);
-     
-         //this query pulls all of the data from the table
-         var query = client.query('SELECT * FROM studentsinfo');
+    //updates the booksread field in table
+    pg.connect(connectionString, function(err, client, done) {
+        client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [data.booksread, id]);
 
-     query.on('row', function(row){
-           results.push(row);
+        //this query pulls all of the data from the table
+        var query = client.query('SELECT * FROM studentsinfo');
 
-         });
-         
-          //this stops the database from pushing each row to the results array
-         query.on('end', function(){
-           client.end();
-           return res.json(results);
-            
-         });
-       });
-     });
+        query.on('row', function(row) {
+            results.push(row);
+
+        });
+
+        //this stops the database from pushing each row to the results array
+        query.on('end', function() {
+            client.end();
+            return res.json(results);
+
+        });
+    });
+});
 
 
 //this sets our server to localhost:3000

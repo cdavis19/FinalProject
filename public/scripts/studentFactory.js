@@ -1,23 +1,23 @@
 var app = angular.module('myMod');
 //taking in an empty object from the dbctrl
-app.factory('studentFactory', function(){
+app.factory('studentFactory', function() {
 
-  var studentInfo = {};
+    var studentInfo = {};
 
-  return {
-    sendStudent: sendStudent,
-    returnStudent: returnStudent
-  }
+    return {
+        sendStudent: sendStudent,
+        returnStudent: returnStudent
+    }
 
 
-  //passing data between two controllers
-  function sendStudent(selectedStudent){
-  
-    studentInfo = selectedStudent;
-  }
+    //passing data between two controllers
+    function sendStudent(selectedStudent) {
 
-  function returnStudent() {
-    return studentInfo;
-  }
+        studentInfo = selectedStudent;
+    }
+
+    function returnStudent() {
+        return studentInfo;
+    }
 
 });

@@ -19,17 +19,12 @@
 				<div ng-hide="loginButton">
 					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">Login</button>
 				</div>
-				<div ng-hide="registerButton">
+				<div ng-hide="loginButton">
 					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#registerModal">Register</button>
 				</div>
 				<div ng-show="loginConfirmMessage">
 					<p>
 						Hello {{selectedStudent.studentname}}!
-					</p>
-				</div>
-				<div ng-show="registerConfirmMessage">
-					<p>
-						Hello {{newStudent.studentname}}!
 					</p>
 				</div>
 			</ul>
@@ -49,7 +44,7 @@
 			<div class="modal-body">
 				<label for="userName">Name:</label>
 				<input type="text" name="userName" ng-model="student.studentname" />
-				<input type="button" name="getUser" id="getUser" ng-click="getUser()" value="Click me" data-dismiss="modal"/>
+				<input type="button" name="getUser" id="getUser" ng-click="getUser()" value="Click me" data-dismiss="modal" />
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -67,10 +62,8 @@
 			</div>
 			<div class="modal-body">
 				<label for="userName">Name:</label>
-				<input type="text" name="userName" ng-model="newStudent.studentname" />
-				<input type="button" name="addUser" id="addUser" ng-click="register()" value="Click me" data-dismiss="modal"/>
-
-
+				<input type="text" name="userName" ng-model="student.studentname" />
+				<input type="button" name="addUser" id="addUser" ng-click="" value="Click me" data-dismiss="modal" />
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
