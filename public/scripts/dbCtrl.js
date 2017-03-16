@@ -20,11 +20,18 @@ app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, s
 
         studentFactory.sendStudent($scope.selectedStudent);
 //displays the message shown on login
-        if (!$scope.display) {
-            $scope.display = !$scope.display;
+        if (!$scope.loginConfirmMessage) {
+            $scope.loginConfirmMessage = !$scope.loginConfirmMessage;
         } else {
           console.log('something went wrong');
         };
+
+        if (!$scope.loginButton) {
+            $scope.loginButton = !$scope.loginButton;
+        } else {
+          console.log('something went wrong');
+        };
+
 
     }
 

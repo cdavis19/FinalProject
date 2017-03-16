@@ -16,7 +16,14 @@
 				<li><a href="#/formOutput">Track Progress</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Login</button>
+				<div ng-hide="loginButton">
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Login</button>
+				</div>
+				<div ng-show="loginConfirmMessage">
+					<p>
+						Hello {{selectedStudent.studentname}}!
+					</p>
+				</div>
 			</ul>
 		</div>
 	</div>
@@ -34,12 +41,7 @@
 			<div class="modal-body">
 				<label for="userName">Name:</label>
 				<input type="text" name="userName" ng-model="student.studentname" />
-				<input type="button" name="getUser" id="getUser" ng-click="getUser()" value="Click me" />
-				<div ng-show="display">
-					<p>
-						{{selectedStudent.studentname}} read {{selectedStudent.booksread}} books!
-					</p>
-				</div>
+				<input type="button" name="getUser" id="getUser" ng-click="getUser()" value="Click me" data-dismiss="modal"/>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
