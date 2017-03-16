@@ -19,12 +19,17 @@
 				<div ng-hide="loginButton">
 					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">Login</button>
 				</div>
-				<div ng-hide="loginButton">
+				<div ng-hide="registerButton">
 					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#registerModal">Register</button>
 				</div>
 				<div ng-show="loginConfirmMessage">
 					<p>
 						Hello {{selectedStudent.studentname}}!
+					</p>
+				</div>
+				<div ng-show="registerConfirmMessage">
+					<p>
+						Hello {{newStudent.studentname}}!
 					</p>
 				</div>
 			</ul>
@@ -53,7 +58,7 @@
 	</div>
 </div>
 <!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" ng-controller="registerCtrl">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -63,7 +68,9 @@
 			<div class="modal-body">
 				<label for="userName">Name:</label>
 				<input type="text" name="userName" ng-model="newStudent.studentname" />
-				<input type="button" name="addUser" id="addUser" ng-click="dbFactory.addStudent(newStudent)" value="Click me" data-dismiss="modal"/>
+				<input type="button" name="addUser" id="addUser" ng-click="register()" value="Click me" data-dismiss="modal"/>
+
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

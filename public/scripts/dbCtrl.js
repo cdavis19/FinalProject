@@ -2,8 +2,8 @@ var app = angular.module('myMod');
 
 
 
-app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory) {
-    console.log('dbctrl is running');
+app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory, $location) {
+
 
     // Gets all the rows from DB
     dbFactory.getStudent().then(function() {
@@ -24,20 +24,22 @@ app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, s
         if (!$scope.loginConfirmMessage) {
             $scope.loginConfirmMessage = !$scope.loginConfirmMessage;
         } else {
-            console.log('something went wrong');
+
         };
 
         if (!$scope.loginButton) {
             $scope.loginButton = !$scope.loginButton;
+            $scope.registerButton = !$scope.registerButton;
+
         } else {
-            console.log('something went wrong');
+
         };
-
+        $location.path('/form');
 
     }
 
-    $scope.addUser = function(){
-      
-    }
+
+
+
 
 });

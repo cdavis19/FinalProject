@@ -44,9 +44,11 @@ app.post('/add-student', function(req, res, next) {
     var results = [];
     var data = {
         studentname: req.body.studentname
-    }
+    };
+
     pg.connect(connectionString, function(err, client, done) {
         client.query('INSERT INTO studentsinfo(studentname, booksread) values($1, $2)', [data.studentname, 0]);
+
         var query = client.query('SELECT * FROM studentsinfo');
 
         query.on('row', function(row) {
@@ -55,6 +57,7 @@ app.post('/add-student', function(req, res, next) {
         query.on('end', function() {
             client.end();
             return res.json(results);
+            console.log(results);
         });
     });
 });
@@ -66,19 +69,19 @@ app.post('/add-student', function(req, res, next) {
        booksread: req.body.booksread
      };
 
-     console.log(data);
+
      pg.connect(connectionString, function(err, client, done) {
        client.query('UPDATE studentsinfo SET booksread=($1) WHERE id=($2)', [data.booksread, id]);
      var query = client.query('SELECT * FROM studentsinfo');
 
      query.on('row', function(row){
            results.push(row);
-         console.log(row);
+
          });
          query.on('end', function(){
            client.end();
            return res.json(results);
-             console.log(results);
+            
          });
        });
      });

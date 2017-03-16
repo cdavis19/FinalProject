@@ -20,7 +20,7 @@ app.factory('dbFactory', function($http){
       method: 'GET',
       url: '/get-student'
     }).then(function success(response){
-      console.log(response);
+
       student = response.data;
     });
     return promise;
@@ -28,15 +28,18 @@ app.factory('dbFactory', function($http){
 
   //this function is for adding new students
   function addStudent(newStudent) {
-  var newStudent = {
-    studentname: student.studentname
-  }
+    console.log('add student has been called');
+console.log(newStudent);
+var newStudent = {
+  studentname: newStudent,
+  booksread: 0
+};
   var promise = $http({
     method: 'POST',
     url: '/add-student',
     data: newStudent
   }).then(function success(response){
-    console.log(response);
+
     student = response.data;
   });
   return promise;
@@ -44,13 +47,13 @@ app.factory('dbFactory', function($http){
 
   //this function updates the number of books by id
 function updateBooksRead(updatedStudent){
-  console.log(updatedStudent);
+
   var promise = $http({
     method: 'PUT',
     url: '/update-books-read/'  + updatedStudent.id,
     data: updatedStudent
   }).then(function success(response){
-    console.log(response);
+
     student = response.data;
   });
   return promise;
