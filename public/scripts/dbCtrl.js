@@ -3,14 +3,14 @@ var app = angular.module('myMod');
 
 
 app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory) {
-  console.log('dbctrl is running');
+    console.log('dbctrl is running');
 
-  // Gets all the rows from DB
-  dbFactory.getStudent().then(function() {
-      $scope.students = dbFactory.update();
-      console.log("$scope.students=" + $scope.students);
-  });
-//taking the name as a variable called student in the ng-model and using that name to search our database, returns the entire row based on that
+    // Gets all the rows from DB
+    dbFactory.getStudent().then(function() {
+        $scope.students = dbFactory.update();
+        console.log("$scope.students=" + $scope.students);
+    });
+    //taking the name as a variable called student in the ng-model and using that name to search our database, returns the entire row based on that
     $scope.student = {};
     $scope.getUser = function() {
         console.log($scope.student);
@@ -20,20 +20,24 @@ app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, s
         $scope.selectedStudent = $scope.students[index];
 
         studentFactory.sendStudent($scope.selectedStudent);
-//displays the message shown on login
+        //displays the message shown on login
         if (!$scope.loginConfirmMessage) {
             $scope.loginConfirmMessage = !$scope.loginConfirmMessage;
         } else {
-          console.log('something went wrong');
+            console.log('something went wrong');
         };
 
         if (!$scope.loginButton) {
             $scope.loginButton = !$scope.loginButton;
         } else {
-          console.log('something went wrong');
+            console.log('something went wrong');
         };
 
 
+    }
+
+    $scope.addUser = function(){
+      
     }
 
 });

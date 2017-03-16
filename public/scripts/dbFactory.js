@@ -28,7 +28,9 @@ app.factory('dbFactory', function($http){
 
   //this function is for adding new students
   function addStudent(newStudent) {
-
+  var newStudent = {
+    studentname: student.studentname
+  }
   var promise = $http({
     method: 'POST',
     url: '/add-student',

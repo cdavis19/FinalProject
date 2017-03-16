@@ -43,12 +43,10 @@ app.get('/get-student', function(req, res) {
 app.post('/add-student', function(req, res, next) {
     var results = [];
     var data = {
-        student: req.body.studentname,
-        numOfBooks: req.body.numberofbooks,
-        pages: req.body.pagesread
+        studentname: req.body.studentname
     }
     pg.connect(connectionString, function(err, client, done) {
-        client.query('INSERT INTO studentsinfo(student, numOfBooks, pages) values($1, $2, $3)', [data.student, data.numOfBooks, data.pages]);
+        client.query('INSERT INTO studentsinfo(studentname, booksread) values($1, $2)', [data.studentname, 0]);
         var query = client.query('SELECT * FROM studentsinfo');
 
         query.on('row', function(row) {
