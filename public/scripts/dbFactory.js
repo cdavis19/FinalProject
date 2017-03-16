@@ -1,5 +1,6 @@
 var app = angular.module('myMod');
 
+//putting everything into an array
 app.factory('dbFactory', function($http){
   var student = [];
   return {
@@ -9,10 +10,11 @@ app.factory('dbFactory', function($http){
     updateBooksRead: updateBooksRead
   };
 
+  //spits out info from our database
   function update(){
     return student;
   };
-
+      //retrieves data from our database
   function getStudent(){
     var promise = $http({
       method: 'GET',
@@ -24,6 +26,7 @@ app.factory('dbFactory', function($http){
     return promise;
   };
 
+  //this function is for adding new students
   function addStudent(newStudent) {
 
   var promise = $http({
@@ -37,6 +40,7 @@ app.factory('dbFactory', function($http){
   return promise;
 };
 
+  //this function updates the number of books by id
 function updateBooksRead(updatedStudent){
   console.log(updatedStudent);
   var promise = $http({

@@ -9,6 +9,8 @@ app.factory('studentFactory', function(){
     returnStudent: returnStudent
   }
 
+
+  //passing data between two controllers
   function sendStudent(selectedStudent){
     console.log('sendStudent function ran');
     console.log(selectedStudent);

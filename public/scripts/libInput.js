@@ -4,6 +4,8 @@ app.controller('libInput', function($scope, dbFactory, readingFactory, studentFa
 
   var updatedStudent = studentFactory.returnStudent();
 
+
+  //taking information from the form and when submit button is clicked it increments the book by one
   $scope.updateBooks = function(student) {
     console.log(student);
     readingFactory.exportTo(student);
