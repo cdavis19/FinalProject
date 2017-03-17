@@ -16,12 +16,16 @@
 				<li><a href="#/formOutput">Track Progress</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<div ng-hide="loginButton">
-					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">Login</button>
-				</div>
-				<div ng-hide="registerButton">
-					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#registerModal">Register</button>
-				</div>
+				<li>
+					<div ng-hide="loginButton">
+						<button type="button" class="headButton" data-toggle="modal" data-target="#loginModal">Login</button>
+					</div>
+				</li>
+				<li>
+					<div ng-hide="registerButton">
+						<button type="button" class="headButton" data-toggle="modal" data-target="#registerModal">Register</button>
+					</div>
+				</li>
 				<div ng-show="loginConfirmMessage">
 					<p>
 						Hello {{selectedStudent.studentname}}!
