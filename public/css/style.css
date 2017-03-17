@@ -17,16 +17,16 @@ html, body{
   border: none;
   margin: 5px;
   padding: 5px;
-  
+
 }
 
-.headButton:hover,
+
 .headButton.hover {
   background-color: #346392;
   text-shadow: -1px 1px #27496d;
 }
 
-.headButton:active,
+
 .headButton.active {
   background-color: #27496d;
   text-shadow: -1px 1px #193047;
