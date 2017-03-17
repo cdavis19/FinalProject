@@ -1,3 +1,7 @@
+
+a {font-family: 'Cabin Sketch', cursive;}
+
+
 html, body{
   height: 100%;
   margin: 0;
@@ -17,7 +21,13 @@ html, body{
   border: none;
   margin: 5px;
   padding: 5px;
+}
 
+
+
+
+footer p {
+  text-align: center;
 }
 
 ]
@@ -32,9 +42,7 @@ html, body{
   text-shadow: -1px 1px #193047;
 }
 
-a {
-    font-family: 'Cabin Sketch', cursive;
-}
+
  .background {
    background-color: #FBC700;
  }
