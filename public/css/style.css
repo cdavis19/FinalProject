@@ -17,7 +17,7 @@ html, body{
   border: none;
   margin: 5px;
   padding: 5px;
-  
+
 }
 
 .headButton:hover,
@@ -218,6 +218,7 @@ width: 240px;
 
 #buttonDiv button{
 
+margin-left: 75px;
   height: 29px;
 overflow: hidden;
 width: 15pxpx;
