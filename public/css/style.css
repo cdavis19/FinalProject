@@ -1,3 +1,16 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -90px;
+}
+.footer,
+.push {
+  height: 90px;
+}
+
 a {
     font-family: 'Cabin Sketch', cursive;
 }
@@ -100,7 +113,7 @@ p.text {
     transform: rotateY(180deg);
 }
 
-h1, h4, li {
+h1, h4 {
     text-align: center;
 }
 
@@ -133,4 +146,75 @@ footer {
 }
 footer p {
   text-align: center;
+}
+
+
+.drop1 select {
+/* background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0; */
+height: 29px;
+overflow: hidden;
+width: 240px;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #F2AD55;
+   color: #fff;
+}
+
+.input {
+  height: 29px;
+overflow: hidden;
+width: 240px;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #F1D874;
+   color: #FF5733;
+}
+
+.drop2 select {
+height: 29px;
+overflow: hidden;
+width: 240px;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #B4E599;
+   color: #fff;
+}
+
+.drop3 select {
+height: 29px;
+overflow: hidden;
+width: 240px;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #99CFE5;
+   color: #fff;
+
+}
+
+.drop4 select {
+height: 29px;
+overflow: hidden;
+width: 240px;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #E599CD  ;
+   color: #fff;
+
+}
+
+#buttonDiv button{
+
+  height: 29px;
+overflow: hidden;
+width: 15pxpx;
+-webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   background-color: #9A55F2;
+   color: #fff;
 }
