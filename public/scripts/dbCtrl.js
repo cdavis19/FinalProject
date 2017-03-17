@@ -40,6 +40,7 @@ app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, s
         } else {
 
         };
+
         $location.path('/form');
 
     }

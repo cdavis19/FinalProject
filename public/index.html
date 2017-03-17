@@ -11,15 +11,16 @@
 </head>
 
 <body ng-controller='dbCtrl'>
-    <div ng-controller="refreshCtrl">
+    <div class="wrapper" ng-controller="refreshCtrl">
         <header ng-controller="registerCtrl">
             <header-directive></header-directive>
         </header>
         <div>
             <ng-view></ng-view>
         </div>
-        <footer-directive></footer-directive>
+        <div class="pushFooter"></div>
     </div>
+    <footer-directive></footer-directive>
 
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js'></script>
