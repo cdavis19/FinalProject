@@ -4,7 +4,8 @@ var app = angular.module('myMod');
 
 //initializes dbCtrl
 app.controller('dbCtrl', function($scope, $animate, dbFactory, readingFactory, studentFactory, $location) {
-
+    var date = new Date();
+    $scope.year = date.getFullYear();
 
     // Gets all the rows from DB
     dbFactory.getStudent().then(function() {

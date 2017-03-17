@@ -1,69 +1,71 @@
-<div ng-controller="libInput">
-</div>
-<div ng-controller="libOutput">
-</div>
-<div class="yellow">
-    <select required ng-model="student.character">
-      <option value="" disabled selected>Choose your character</option>
-      <option>Rockstar</option>
-      <option>Explorer</option>
-      <option>Adventurer</option>
-      <option>Champion</option>
-    </select>
-</div>
+<div class="container">
+  <div ng-controller="libInput">
+  </div>
+  <div ng-controller="libOutput">
+  </div>
+  <div class="yellow">
+      <select required ng-model="student.character">
+        <option value="" disabled selected>Choose your character</option>
+        <option>Rockstar</option>
+        <option>Explorer</option>
+        <option>Adventurer</option>
+        <option>Champion</option>
+      </select>
+  </div>
 
-<div class="bookdiv">
-    <input type="text" placeholder="Enter Title of Book" ng-model="student.book">
-</div>
+  <div class="bookdiv">
+      <input type="text" placeholder="Enter Title of Book" ng-model="student.book">
+  </div>
 
-<div class="green">
-    <select required ng-model="student.place">
-      <option value="" disabled selected>Pick a place</option>
-      <option>The Park</option>
-      <option>The beach</option>
-        <option>At School</option>
-          <option>At Home</option>
-            <option>In Outerspace</option>
-              <option>Other</option>
-    </select>
-</div>
+  <div class="green">
+      <select required ng-model="student.place">
+        <option value="" disabled selected>Pick a place</option>
+        <option>The Park</option>
+        <option>The beach</option>
+          <option>At School</option>
+            <option>At Home</option>
+              <option>In Outerspace</option>
+                <option>Other</option>
+      </select>
+  </div>
 
-<div class="yellow">
-    <select required ng-model="student.pagesread">
-      <option value="" disabled selected>How many pages have you read?</option>
-      <option>less than 50</option>
-      <option>Somewhere between 50 - 100</option>
-      <option>More than 100</option>
-    </select>
-</div>
+  <div class="yellow">
+      <select required ng-model="student.pagesread">
+        <option value="" disabled selected>How many pages have you read?</option>
+        <option>less than 50</option>
+        <option>Somewhere between 50 - 100</option>
+        <option>More than 100</option>
+      </select>
+  </div>
 
-<!-- <div class="green">
-  <select required ng-model="student.totalbooks">
-    <option value="" disabled selected>How many books have you read so far?</option>
-    <option>1</option>
-    <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>more than 5</option>
-      <option>more than 10</option>
-      <option>other</option>
-        </select>
-  </div> -->
+  <!-- <div class="green">
+    <select required ng-model="student.totalbooks">
+      <option value="" disabled selected>How many books have you read so far?</option>
+      <option>1</option>
+      <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>more than 5</option>
+        <option>more than 10</option>
+        <option>other</option>
+          </select>
+    </div> -->
 
-<div class="yellow">
-    <select required ng-model="student.time">
-    <option value="" disabled selected>How long did you read?</option>
-    <option>30 minutes</option>
-    <option>One Hour</option>
-      <option>More than an hour</option>
-        </select>
-</div>
-
-
-
+  <div class="yellow">
+      <select required ng-model="student.time">
+      <option value="" disabled selected>How long did you read?</option>
+      <option>30 minutes</option>
+      <option>One Hour</option>
+        <option>More than an hour</option>
+          </select>
+  </div>
 
 
-<div id="buttonDiv">
-    <button type="submit" ng-click="updateBooks(student)">Let's Submit!</button>
+
+
+
+  <div id="buttonDiv">
+      <button type="submit" ng-click="updateBooks(student)">Let's Submit!</button>
+  </div>
 </div>

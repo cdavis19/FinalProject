@@ -116,3 +116,9 @@ h1, h4, li {
     font-size: 20px;
     text-align: center;
 }
+footer {
+  padding: 20px;
+}
+footer p {
+  text-align: center;
+}
