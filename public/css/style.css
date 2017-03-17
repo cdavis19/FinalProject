@@ -1,61 +1,40 @@
-
-a {font-family: 'Cabin Sketch', cursive;}
-
-
-html, body{
-  height: 100%;
-  margin: 0;
+a {
+    font-family: 'Cabin Sketch', cursive;
 }
 .wrapper {
-  min-height: 100%;
-  margin-bottom: -90px;
+    min-height: 100%;
+    margin-bottom: -90px;
 }
-.footer,
-.push {
-  height: 90px;
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -90px;
+}
+.footer, .push {
+    height: 90px;
 }
 .headButton {
-  color: #fff;
-  background-color: #6496c8;
-  text-shadow: -1px 1px #417cb8;
-  border: none;
-  margin: 5px;
-  padding: 5px;
+    color: #fff;
+    background-color: #6496c8;
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+    margin: 5px;
+    padding: 5px;
 }
-
-
-
-
-footer p {
-  text-align: center;
-}
-
-]
 .headButton.hover {
-  background-color: #346392;
-  text-shadow: -1px 1px #27496d;
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
 }
-
-
 .headButton.active {
-  background-color: #27496d;
-  text-shadow: -1px 1px #193047;
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
 }
-
-
- .background {
-   background-color: #FBC700;
- }
-
-  .trophyroom {
+footer p {
     text-align: center;
-    font-family: 'Cabin Sketch', cursive;
-    color: #0071BC;
-    font-size: 75px;
-
-  }
-
-
+}
 .box {
     height: 175px;
     width: 200px;
@@ -64,7 +43,6 @@ footer p {
     background-color: blue;
     text-align: center;
 }
-
 p.text {
     margin-top: 25px;
     word-wrap: break-word;
@@ -72,7 +50,6 @@ p.text {
     margin-right: 25px;
     color: white;
 }
-
 .trophy {
     height: 175px;
     width: 200px;
@@ -82,75 +59,54 @@ p.text {
     /*text-align: center;*/
     box-shadow: 5px 5px 15px #606060;
 }
-
 .row {
-    margin-top: 100px;
+    margin-top: 20px;
 }
-
 .locked {
     filter: brightness(35%) grayscale(100%);
     background-color: grey;
 }
-
 .unlocked {}
-
 .flip-container {
     perspective: 1000px;
 }
-
-
 /* flip the pane when hovered */
-
 .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
 }
-
 .flip-container, .front, .back {
     width: 200px;
     height: 175px;
 }
-
-
 /* flip speed goes here */
-
 .flipper {
     transition: 0.8s;
     transform-style: preserve-3d;
     position: relative;
 }
-
-
 /* hide back of pane during swap */
-
 .front, .back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
 }
-
 .front {
     z-index: 2;
     /* for firefox 31 */
     transform: rotateY(0deg);
 }
-
-
 /* back, initially hidden pane */
-
 .back {
     transform: rotateY(180deg);
 }
-
-h1, h4 {
+h1, h4, li {
     text-align: center;
 }
-
 .modal {
     text-align: center;
     padding: 0!important;
 }
-
 .modal:before {
     content: '';
     display: inline-block;
@@ -158,93 +114,13 @@ h1, h4 {
     vertical-align: middle;
     margin-right: -4px;
 }
-
 .modal-dialog {
     display: inline-block;
     text-align: left;
     vertical-align: middle;
 }
-
 #resMessage {
     padding: 15px;
     font-size: 20px;
     text-align: center;
-}
-footer {
-  padding: 20px;
-}
-footer p {
-  text-align: center;
-}
-
-
-.drop1 select {
-/* background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0; */
-height: 29px;
-overflow: hidden;
-width: 240px;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #F2AD55;
-   color: #fff;
-}
-
-.input {
-  height: 29px;
-overflow: hidden;
-width: 240px;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #F1D874;
-   color: #FF5733;
-}
-
-.drop2 select {
-height: 29px;
-overflow: hidden;
-width: 240px;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #B4E599;
-   color: #fff;
-}
-
-.drop3 select {
-height: 29px;
-overflow: hidden;
-width: 240px;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #99CFE5;
-   color: #fff;
-
-}
-
-.drop4 select {
-height: 29px;
-overflow: hidden;
-width: 240px;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #E599CD  ;
-   color: #fff;
-
-}
-
-#buttonDiv button{
-
-margin-left: 75px;
-  height: 29px;
-overflow: hidden;
-width: 15pxpx;
--webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   background-color: #9A55F2;
-   color: #fff;
 }
