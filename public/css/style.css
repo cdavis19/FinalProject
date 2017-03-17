@@ -20,7 +20,7 @@ html, body{
 
 }
 
-
+]
 .headButton.hover {
   background-color: #346392;
   text-shadow: -1px 1px #27496d;
@@ -230,6 +230,7 @@ width: 240px;
 
 #buttonDiv button{
 
+margin-left: 75px;
   height: 29px;
 overflow: hidden;
 width: 15pxpx;
